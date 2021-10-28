@@ -13,6 +13,12 @@ If you have a line of text including the phrase in quotes "Hi There", you can se
 * Select the text and quotes and delete the quotes type `r<cr>` This will change the text to - Hi There
 * To put some parentheses around the text, visually select Hi There and type `r(<cr>` - yup, you get (Hi There)
 
+### Visual selection from normal mode
+When the cursor is on a word in normal mode and you press the expand key, the first visual selection will be the word that was under the cursor, as if you had typed `viw` From there you can press `d` or `c` to delete or change the word. So, you can change a word with two keystrokes `<expand>c` rather that the three when typing `ciw`. In fact, if you have only selected a single word, vi-viz will effect a `ciw` for you so you can use dot repeat.
+
+### Visual selection expansion in visual mode
+The expansion will not be by words any more. vi-viz looks for nearest quotes, brackets etc.
+
 ### Dependencies
 
 vi-viz is written in Lua and requires Neovim. The plugin works with VSCode Neovim.
