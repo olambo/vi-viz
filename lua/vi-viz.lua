@@ -87,7 +87,6 @@ local function vizMoved(tv, who)
   local viz = {}
   viz["scol"] = tv1['scol']
   viz["ecol"] = tv1['ecol']
-  ccol = tv1['ccol']
   table.insert(vizStack, viz) 
   return true
 end
@@ -210,6 +209,8 @@ local function getOp(chr, isSearchTerm)
     else 
       return '[', ']'
     end
+  elseif chr == '<' or chr == '>' then
+    return '<', '>'
   elseif chr == '{' or chr == '}' then
     return '{', '}'
   elseif chr == '(' or chr == ')' then
