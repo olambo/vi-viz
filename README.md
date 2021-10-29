@@ -25,7 +25,10 @@ The expansion will not be by words any more. vi-viz looks for nearest quotes, br
 
 ### Issues and future enhancements
 
-The plugin is not expanding to `<` or `>` However you can still surround with these if you select a region. Html tags are not currently supported. The plugin currently does not expand to quotes, brackets over multiple lines
+The plugin is not expanding to `<` or `>` However you can still surround with these if you select a region. Html tags are not currently supported. The plugin currently does not surround on quotes, brackets etc over multiple lines.
+
+An operator to allow surround by arbitrary text, is a work in progress, 
+Block mode is a wip using vim's search and replace.
 
 ### Dependencies
 
